@@ -7,7 +7,7 @@
 %\documentclass{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{amssymb,amsmath} 
+\usepackage{amssymb,amsmath,amsthm} 
 \usepackage[papersize={400pt,520pt},margin=15pt]{geometry}% e-readers
 %\usepackage{geometry}% normal
 %\usepackage[margin=15pt]{geometry} old
@@ -108,7 +108,8 @@ $$
 
 \textbf{Chinese Remainder Theorem.} \emph{Let $A$ be a commutative ring and $\aaa_1,\dots,\aaa_n$ ideals such that $\aaa_i+\aaa_j=A$ for $i\not=j$. Then the natural morphism from $A$ to the product of the $A/\aaa_i$ is surjective. Moreover the intersection of the $\aaa_i$ coincides with their product.}
 
-\emph{Proof.} We claim
+\begin{proof} 
+We claim
 \begin{equation}\label{crt}
 A=\aaa_1+\aaa_2\cdots\aaa_n.
 \end{equation}
@@ -125,7 +126,8 @@ $$
 \aaa\aaa_2\cdots\aaa_n\subset
 \aaa_1\ (\aaa_2\cap\cdots \cap \aaa_n)\subset \aaa.
 $$
-This gives the second claim, directly for $n=2$, by induction for $n>2$. QED
+This gives the second claim, directly for $n=2$, by induction for $n>2$. 
+\end{proof}
 
 \section{Page 8}%
 
@@ -137,7 +139,8 @@ The following is taken from Wikipedia:
 
 \emph{Let $A$ be a commutative ring and $S$ a multiplicatively closed additive subgroup of $A$. Let $\mf a_1,\dots,\mf a_n,n\ge1$ be ideals such that $\mf a_i$ is prime for $i\ge3$. If $S$ is not contained in any $\mf a_i$, then $S$ is not contained in their union.}
 
-\emph{Proof.} We argue by induction on $n$. It suffices to find an element $s$ that is in $S$ and not in $\mf a_i$ for any $i$. 
+\begin{proof} 
+We argue by induction on $n$. It suffices to find an element $s$ that is in $S$ and not in $\mf a_i$ for any $i$. 
 
 1. The case $n=1$ is trivial. 
 
@@ -153,17 +156,20 @@ Claim: the element $s:=s_1\cdots s_{n-1}+s_n$ is in $S$ but not in $\mf a_i$ for
 
 2.2.2. If $n>2$ then, since $\mf a_n$ is prime, there is an $i$ less than $n$ such that $s_i$ is in $\mf a_n$, a contradiction.
 
-This proves the claim, and thus the statement. $\square$
+This proves the claim, and thus the statement. 
+\end{proof}
 
 Here is a version which is slightly weaker but sufficient for our purpose:
 
 \emph{Let $A$ be a commutative ring and $\mf a$ an ideal. Let $\mf p_1,\dots,\mf p_n,n\ge1$ be prime ideals. If $S$ is not contained in any $\mf p_i$, then $S$ is not contained in their union.}
 
-\emph{Proof.} We can assume that $n\ge2$ and that there are elements $a_1,\dots,a_n$ in $\mf a$ such that 
+\begin{proof} 
+We can assume that $n\ge2$ and that there are elements $a_1,\dots,a_n$ in $\mf a$ such that 
 $$
 a_i\in\mf p_i\setminus\bigcup_{j \ne i}\mf p_j.
 $$ 
-Then $a:=a_1\cdots a_{n-1}+a_n$ is in $\mf a$ but not in $\mf p_i$ for any $i$.$\square$
+Then $a:=a_1\cdots a_{n-1}+a_n$ is in $\mf a$ but not in $\mf p_i$ for any $i$.
+\end{proof}
 
 %About the proof of Part (ii) of Proposition 1.11 p.~8, if a prime ideal contains the intersection of a finite family of ideals, then it contains the product of this family, and thus one of the factors.
 
@@ -420,7 +426,9 @@ $$
 
 \section{Page 24, vanishing tensors}\label{vt}%
 
-Taken from Lemma 10, Chapter 1, Section 2, Subsection 11, page 41 in Nicolas Bourbaki, \textbf{Algèbre commutative: Chapitres 1 à 4}, Masson, Paris 1985:
+Permanent tag: vanten.
+
+This is taken from Lemma 10, Chapter 1, Section 2, Subsection 11, page 41 in Nicolas Bourbaki, \textbf{Algèbre commutative: Chapitres 1 à 4}, Masson, Paris 1985:
 
 \emph{Let $A$ be a (non necessarily commutative) associative ring with $1$, let $M$ be a right $A$-module, let $N$ be a left $A$-module, let 
 $$
@@ -448,7 +456,8 @@ $$
 $$ 
 for all $j$.}
 
-Proof. Let $F$ be the free left $A$-module whose basis is the family of symbols $(\,e_i)_{i\in I}$, and consider the exact sequence 
+\begin{proof} 
+Let $F$ be the free left $A$-module whose basis is the family of symbols $(\,e_i)_{i\in I}$, and consider the exact sequence 
 $$
 0\to R\xrightarrow\iota F\xrightarrow\varphi N\to 0
 $$ 
@@ -480,6 +489,7 @@ $$
 $$
 0=\varphi(\iota(r_j))=\sum_{i\in I}a_{ij}y_i.
 $$ 
+\end{proof}
 
 In the same spirit, we have:
 
@@ -497,11 +507,13 @@ $$
 $$ 
 for all $j$.}
 
-Proof. Applying $M\otimes_A-\ $ to the above exact sequence we get the exact sequence 
+\begin{proof} 
+Applying $M\otimes_A-\ $ to the above exact sequence we get the exact sequence 
 $$
 M^{\oplus I}\xrightarrow{\phi'}M^{\oplus J}\xrightarrow{\psi'}M\otimes_AN\to0
 $$ 
-and $\psi'(u)=0$. Thus there is a $w$ in $M^{\oplus I}$ such that $\phi'(w)=u$, and it's easy to see that this $w$ does the job.
+and $\psi'(u)=0$. Thus there is a $w$ in $M^{\oplus I}$ such that $\phi'(w)=u$, and it's easy to see that this $w$ does the job. 
+\end{proof}
 
 \section{Page 27, contracted ideals}\label{27}%
 
@@ -516,11 +528,14 @@ Given $A$-modules $M$ and $N$ we say that $N$ is $M$\textbf{-flat} if for all su
 
 (a) If $M\otimes N'\to M\otimes N$ is injective for \emph{all finitely generated} submodule $N'$ of $N$, then $N$ is $M$-flat.
 
-Proof. Let $N''$ be an arbitrary submodule of $N$, let $t''=\sum x_i\otimes y_i$ in $M\otimes N''$ (with $x_i\in M,y_i\in N''$) be such that the tensor $t=\sum x_i\otimes y_i$ in $M\otimes N$ vanishes. It suffices to show $t''=0$. Let $N'$ be the submodule of $N''$ generated by the $y_i$. By assumption the tensor $t'=\sum x_i\otimes y_i$ of $M\otimes N'$ vanishes. As $t'\mapsto t''$, this implies $t''=0$. QED
+\begin{proof} 
+Let $N''$ be an arbitrary submodule of $N$, let $t''=\sum x_i\otimes y_i$ in $M\otimes N''$ (with $x_i\in M,y_i\in N''$) be such that the tensor $t=\sum x_i\otimes y_i$ in $M\otimes N$ vanishes. It suffices to show $t''=0$. Let $N'$ be the submodule of $N''$ generated by the $y_i$. By assumption the tensor $t'=\sum x_i\otimes y_i$ of $M\otimes N'$ vanishes. As $t'\mapsto t''$, this implies $t''=0$. 
+\end{proof}
 
 (b) If $N$ is $M$-flat, then so are the submodules and the quotients of $N$. 
 
-Proof. The case of the submodules is left to the reader. Let 
+\begin{proof} 
+The case of the submodules is left to the reader. Let 
 $$
 0\to R\xrightarrow iN\xrightarrow pQ\to0
 $$ 
@@ -538,17 +553,19 @@ $$
 \overline R\ar[r,"\overline i"']&\overline N\ar[r,"\overline p"']& \overline Q\ar[r]&0
 \end{tikzcd}
 $$ 
-where $\overline r$ is the identity of $\overline R$. As $\overline n$ is injective, so is $\overline q$. QED
+where $\overline r$ is the identity of $\overline R$. As $\overline n$ is injective, so is $\overline q$. 
+\end{proof}
 
 (c) The direct sum of a family of $M$-flat modules is $M$-flat. 
 
-Proof. Let $(N_i)_{i\in I}$ be our family. 
+\begin{proof} 
+Let $(N_i)_{i\in I}$ be our family. 
 
 $\bu$ First assume $I=\{1,2\}$. We prove the result by considering the \emph{split} exact sequence 
 $$
 0\to N_1\xrightarrow i N_1\oplus N_2\xrightarrow pN_2\to0.
 $$ 
-The details are left to the reader.
+The details are left to the reader. 
 
 $\bu$ Second assume that $I$ is finite. We prove the statement by induction.
 
@@ -560,7 +577,8 @@ We leave the rest of the proof to the reader.
 
 (d) If $M\otimes\aaa\to M\otimes A$ is injective for all finitely generated ideal $\aaa$, then $M$ is flat.
 
-We leave again the proof to the reader.
+We leave again the proof to the reader. 
+\end{proof}
 
 \section{Page 35, flat modules}%
 
@@ -570,7 +588,7 @@ Taken from Chapter 1, Section 2, Subsection 11 in Nicolas Bourbaki, \textbf{Alg�
 
 \emph{For all finite families $(x_i)\subset M,(y_i)\subset N$ such that $\sum x_i\otimes y_i=0$ there are finite families $(a_{ij})\subset A$ and $(x'_j)\subset M$ such that $\sum_jx'_ja_{ij}=x_i$ for all $i$ and $\sum_ia_{ij}y_i=0$ for all $j$.}
 
-Proof. This follows easily from \S\ref{vt}. 
+\emph{Proof.} This follows easily from \S\ref{vt}. $\square$
 
 We also have:
 
@@ -578,7 +596,7 @@ We also have:
 
 \emph{For all finite families $(x_i)\subset M,(a_i)\subset A$ such that $\sum x_ia_i=0$ there are finite families $(a'_{ij})\subset A$ and $(x'_j)\subset M$ such that $\sum_jx'_ja'_{ij}=x_i$ for all $i$ and $\sum_ia'_{ij}a_i=0$ for all $j$.}
 
-Proof. We set $N:=A$ in the previous statement.
+\emph{Proof.} We set $N:=A$ in the previous statement. $\square$
 
 There is also a statement and a proof of this result in the Stacks Project; see the tag\\ http://stacks.math.columbia.edu/tag/00HK
 
@@ -746,7 +764,7 @@ $$
 
 (c) \emph{The prime ideal $\mf p$ is contracted if and only if} $B\otimes_AA_{\mf p}/\mf p_{\mf p}\ne0$. \emph{In particular, a maximal ideal $\mf m$ in $A$ is contracted if and only if $B\otimes_AA/\mf m\ne0$. (Compare with Section~\ref{27} p.~\pageref{27}.)}
 
-Proof: (a) is clear. To prove (b), note that we have $\mf pB_{\mf p}\subset\mf m$. This implies successively 
+\begin{proof} (a) is clear. To prove (b), note that we have $\mf pB_{\mf p}\subset\mf m$. This implies successively 
 $$
 \mf p_{\mf p}\subset(f_{\mf p})^{-1}\mf m,
 $$ 
@@ -756,6 +774,7 @@ $$
 $$
 f^{-1}\beta^{-1}\mf m=\alpha^{-1}(f_{\mf p})^{-1}\mf m=\alpha^{-1}\mf p_{\mf p}=\mf p.
 $$ 
+\end{proof}
 \end{comment}
 
 %\begin{comment}
@@ -967,7 +986,8 @@ The following is taken from Wikipedia
 
 \textbf{Noether Normalization Lemma.} \emph{If $k$ is a field and $A$ a finitely generated $k$-algebra, then there exist a nonnegative integer $d$ and algebraically independent elements $y_1,...,y_d$ in $A$ such that $A$ is a finitely generated $k[y_1,...,y_d]$-module.}
 
-\emph{Proof.} The $k$-algebra $A$ is generated by elements $y_1$, ..., $y_m$ such that $y_1,..., y_d$ are algebraically independent over $k$ and the rest are algebraic over $k(\,y_1,...,y_d)$. We shall induct on $m$. If $m=d$ the assertion is trivial. Assume $m>d$. It is enough to show that there is a sub-$k$-algebra $S$ of $A$ generated by $m-1$ elements such that $A$ is a finitely generated $S$-module, for, by the inductive hypothesis, we can find algebraically independent elements $x_1,...,x_d$ of $S$ such that $S$ is a finitely generated $k[x_1,...,x_d]$-module. Since $m>d$, there is a nonzero polynomial $f$ in $m$ indeterminates over $k$ such that
+\begin{proof} 
+The $k$-algebra $A$ is generated by elements $y_1$, ..., $y_m$ such that $y_1,..., y_d$ are algebraically independent over $k$ and the rest are algebraic over $k(\,y_1,...,y_d)$. We shall induct on $m$. If $m=d$ the assertion is trivial. Assume $m>d$. It is enough to show that there is a sub-$k$-algebra $S$ of $A$ generated by $m-1$ elements such that $A$ is a finitely generated $S$-module, for, by the inductive hypothesis, we can find algebraically independent elements $x_1,...,x_d$ of $S$ such that $S$ is a finitely generated $k[x_1,...,x_d]$-module. Since $m>d$, there is a nonzero polynomial $f$ in $m$ indeterminates over $k$ such that
 $$f(\,y_1,\dots,y_m) = 0.$$
 Let $r$ be an integer larger than the degree of $f$ and set
 $$z_i=y_i-y_1^{r^{i-1}},\quad2\le i \le m.$$
@@ -979,7 +999,8 @@ is
 $$y_1^{\alpha_1+r\alpha_2+\cdots+\alpha_m r^{m-1}}.$$
 Then it is easy to see that the highest term in $y_1$ of $f(\,y_1,z_2+y_1^r,...,z_m+y_1^{r^{m-1}})$ is 
 $$ay_1^{\alpha_1+r\alpha_2+\cdots+\alpha_m r^{m-1}}$$
-for some multi-index $\alpha$ and some $a$ in $k^\times$. In particular $y_1$ is integral over $S=k[z_2,...,z_m]$. Since the $y_i=z_i+y_1^{r^{i-1}}$, $2\le i\le m$, are also integral over this ring, $A$ is integral over $S$. It follows $A$ is a finitely generated $S$-module. $\square$
+for some multi-index $\alpha$ and some $a$ in $k^\times$. In particular $y_1$ is integral over $S=k[z_2,...,z_m]$. Since the $y_i=z_i+y_1^{r^{i-1}}$, $2\le i\le m$, are also integral over this ring, $A$ is integral over $S$. It follows $A$ is a finitely generated $S$-module. 
+\end{proof}
 
 Here is a statement of Zariski's Lemma:
 
@@ -1134,9 +1155,11 @@ Let $a$ be in $A$. We must show:
 
 $a\in\mf q$ for all $\mf p$-primary ideal $\mf q$ $\iff$ there is an $s$ in $A\setminus\mf p$ such that $as=0$. 
 
-\emph{Proof.} If $s$ in $A\setminus\mf p$ satifies $as=0$, and if $\mf q$ is a $\mf p$-primary ideal, then $a$ is in $\mf q$.
+\begin{proof} 
+If $s$ in $A\setminus\mf p$ satifies $as=0$, and if $\mf q$ is a $\mf p$-primary ideal, then $a$ is in $\mf q$.
 
-If $as\neq0$ for all $s\in A\setminus\mf p$, then $\frac a1\neq0$, and Corollary 10.20 implies that there is a $\mf p$-primary ideal $\mf q$ such that $\frac a1\notin\mf q_{\mf p}$, and thus $a\notin\mf q$.
+If $as\neq0$ for all $s\in A\setminus\mf p$, then $\frac a1\neq0$, and Corollary 10.20 implies that there is a $\mf p$-primary ideal $\mf q$ such that $\frac a1\notin\mf q_{\mf p}$, and thus $a\notin\mf q$. 
+\end{proof}
 
 \section{Page 118, proof of Proposition 11.4}%\label{odnd}
 
