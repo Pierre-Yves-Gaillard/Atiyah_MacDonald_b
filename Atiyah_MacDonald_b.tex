@@ -8,8 +8,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath,amsthm} 
-\usepackage[papersize={400pt,520pt},margin=15pt]{geometry}% e-readers
-%\usepackage{geometry}% normal
+%\usepackage[papersize={400pt,520pt},margin=15pt]{geometry}% e-readers
+\usepackage{geometry}% normal
 %\usepackage[margin=15pt]{geometry} old
 %\usepackage[papersize={4.5in,6in},margin=0.5cm]{geometry} old
 \usepackage[parfill]{parskip}
@@ -546,7 +546,7 @@ $$
 0\ar[r]&R\ar[r,"i"']&N\ar[r,"p"']& Q\ar[r]&0
 \end{tikzcd}
 $$ 
-where $r$ is the identity of $R$, and the maps $i',p',n$ and $q$ are the obvious ones. Let $S\mapsto\overline S$ be the ``functor'' $M\otimes-$. We obtain the commutative diagram with exact rows
+where $r$ is the identity of $R$, and the maps $i',p',n$ and $q$ are the obvious ones. Letting $S\mapsto\overline S$ be the ``functor'' $M\otimes-$ we obtain the commutative diagram with exact rows
 $$
 \begin{tikzcd}
 \overline R\ar[d,"\overline r"]\ar[r,"\overline{i'}"]&\overline{N'}\ar[d,"\overline n"]\ar[r,"\overline{p'}"]& \overline{Q'}\ar[d,"\overline q"]\ar[r]&0\\ 
@@ -565,11 +565,28 @@ $\bu$ First assume $I=\{1,2\}$. We prove the result by considering the \emph{spl
 $$
 0\to N_1\xrightarrow i N_1\oplus N_2\xrightarrow pN_2\to0.
 $$ 
-The details are left to the reader. 
+%The details are left to the reader. 
+\begin{proof}
+Let $N'$ be a submodule of $N$, set $N'_1:=N'\cap N_1$, let $N'_2$ be the image of $N'$ in $N_2$, and let 
+$$
+\begin{tikzcd}
+0\ar[r]&N'_1\ar[d,"f_1"]\ar[r,"i'"]&N'\ar[d,"f"]\ar[r,"p'"]&N'_2\ar[d,"f_2"]\ar[r]&0\\ 
+0\ar[r]&N_1\ar[r,"i"']&N\ar[r,"p"']&N_2\ar[r]&0
+\end{tikzcd}
+$$  
+be the obvious commutative diagram with exact rows. Letting $S\mapsto\overline S$ be the ``functor'' $M\otimes-$ we obtain the commutative diagram with exact rows
+$$
+\begin{tikzcd}
+\overline{N'_1}\ar[d,"\overline{f_1}"]\ar[r,"\overline{i'}"]&\overline{N'}\ar[d,"\overline f"]\ar[r,"\overline{p'}"]& \overline{N'_2}\ar[d,"\overline{f_2}"]\\ 
+\overline{N_1}\ar[r,"\overline i"']&\overline N\ar[r,"\overline p"']& \overline{N_2}.
+\end{tikzcd}
+$$ 
+It is easy to see that $\overline{f_1},\overline{f_2}$ and $\overline i$ are injective, that this implies that $\overline f$ is also injective.
+\end{proof}
 
 $\bu$ Second assume that $I$ is finite. We prove the statement by induction.
 
-$\bu$ Third assume that $I$ is arbitrary, and let $N'$ be a finitely generated submodule of $N:=\bigoplus_{i\in I}N_i$. Then there is a finite subset $J$ of $I$ such that $N'\subset\bigoplus_{j\in J}N_j$, and we have 
+$\bu$ Third assume that $I$ is arbitrary, and let $N'$ be a finitely generated submodule of $N=\bigoplus_{i\in I}N_i$. Then there is a finite subset $J$ of $I$ such that $N'\subset\bigoplus_{j\in J}N_j$, and we have 
 $$
 N=\left(\bigoplus_{j\in J}N_j\right)\oplus\left(\bigoplus_{i\in I\setminus J}N_i\right). 
 $$ 
