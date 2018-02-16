@@ -202,7 +202,7 @@ To show that the inclusion $(\mf a\!:\!\mf b)\,\mf b\subset(\mf a:\mf b)$ is str
 
 If $f:A\to B$ is a morphism of rings and $\mf a$ is an ideal of $A$, then we can define $\mf a^{\oo e}$ by the formula
 $$
-\mf a^{\oo e}:=\sum_{\alpha\in\mf a}(f(\alpha)).
+\mf a^{\oo e}:=\sum_{\alpha\in\mf a}\ (f(\alpha)).
 $$
 
 \section{Page 10, Exercise 1.18, Part 1}%
@@ -242,9 +242,14 @@ y\in((0)^{\oo e}:(X)^{\oo e})=((0):(X)^{\oo e}),
 $$ 
 $$y\notin(0)=(0)^{\oo e}=((0):(X))^{\oo e}.$$
 
-$\bu$ Let us show that the inclusion $(\mf b_1:\mf b_2)^{\oo c}\subset(\mf b_1^{\oo c}:\mf b_2^{\oo c})$ is strict in general. Set $A:=K$, $B:=K[X]$, $\mf b_1:=(0)$, $\mf b_2:=(X)$. Then we have $1\in(\mf b_1^{\oo c}:\mf b_2^{\oo c})\setminus(\mf b_1:\mf b_2)^{\oo c}$.
-
-$\bu$ Let us show that the inclusion $r(\mf a)^{\oo e}\subset r(\mf a^{\oo e})$ is strict in general. Set $A:=K[X^2]$, $B:=K[X]$, $\mf a:=(X^2)$, $b:=X$. Then we have $X\in r(\mf a^{\oo e})\setminus r(\mf a)^{\oo e}$.
+$\bu$ Let us show that the inclusion $(\mf b_1:\mf b_2)^{\oo c}\subset(\mf b_1^{\oo c}:\mf b_2^{\oo c})$ is strict in general. Set $A:=K$, $B:=K[X]$, $\mf b_1:=(0)$, $\mf b_2:=(X)$. Then we have 
+$$
+1\in(\mf b_1^{\oo c}:\mf b_2^{\oo c})\setminus(\mf b_1:\mf b_2)^{\oo c}.
+$$
+$\bu$ Let us show that the inclusion $r(\mf a)^{\oo e}\subset r(\mf a^{\oo e})$ is strict in general. Set $A:=K[X^2]$, $B:=K[X]$, $\mf a:=(X^2)$. Then we have 
+$$
+X\in r(\mf a^{\oo e})\setminus r(\mf a)^{\oo e}.
+$$
 
 \section{Page 10, Exercise 1.18, Part 2}%
 
