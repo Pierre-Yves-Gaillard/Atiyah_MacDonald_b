@@ -8,8 +8,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath,amsthm} 
-%\usepackage[papersize={400pt,520pt},margin=15pt]{geometry}% e-readers
-\usepackage{geometry}% normal
+\usepackage[papersize={400pt,520pt},margin=15pt]{geometry}% e-readers
+%\usepackage{geometry}% normal
 %\usepackage[margin=15pt]{geometry} old
 %\usepackage[papersize={4.5in,6in},margin=0.5cm]{geometry} old
 \usepackage[parfill]{parskip}
@@ -1154,6 +1154,8 @@ $\bu$ The domain $\mathbb Z[-5]$ is Dedekind but doesn't have unique factorizati
 The fact that $\mathbb Z[-5]$ doesn't have unique factorization follows from the fact that $2\cdot3$ and $$\left(1+\sqrt5\right)\left(1-\sqrt5\right)$$ are irreducible factorizations of $6$.%Indeed, it is easy to check that $2\cdot3$ and $$\left(1+\sqrt5\right)\left(1-\sqrt5\right)$$ are irreducible factorizations of $6$.
 
 \section{Page 102, Completions}%
+
+In the first paragraph after the proof of Lemma 10.1, it is written ``Two Cauchy sequences are equivalent if $x_\nu-y_\nu\to0$ in $G$''. The correct condition is ``the image of $x_\nu-y_\nu$ tends to $0$ in $G/H$, where $H$ is the intersection of all neighborhoods of $0$ in $G$''.
 
 In the penultimate paragraph of p.~102 it is claimed that $\widehat f:\widehat G\to\widehat H$ is continuous, but no topologies have been defined on $\widehat G$ and $\widehat H$. It is simpler to fix this problem in the setting considered in the last paragraph of p.~102. We shall use Corollary 10.4 p.~105. Note that, in this corollary, $\widehat G_n$ really means $(G_n)^\wedge$, which can, and will, be viewed as a subgroup of $\widehat G$. 
 
