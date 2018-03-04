@@ -8,8 +8,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsmath,amsthm} 
-\usepackage[papersize={400pt,520pt},margin=15pt]{geometry}% e-readers
-%\usepackage{geometry}% normal
+%\usepackage[papersize={400pt,520pt},margin=15pt]{geometry}% e-readers
+\usepackage{geometry}% normal
 %\usepackage[margin=15pt]{geometry} old
 %\usepackage[papersize={4.5in,6in},margin=0.5cm]{geometry} old
 \usepackage[parfill]{parskip}
@@ -1157,11 +1157,17 @@ The fact that $\mathbb Z[-5]$ doesn't have unique factorization follows from the
 
 In the penultimate paragraph of p.~102 it is claimed that $\widehat f:\widehat G\to\widehat H$ is continuous, but no topologies have been defined on $\widehat G$ and $\widehat H$. It is simpler to fix this problem in the setting considered in the last paragraph of p.~102. We shall use Corollary 10.4 p.~105. Note that, in this corollary, $\widehat G_n$ really means $(G_n)^\wedge$, which can, and will, be viewed as a subgroup of $\widehat G$. 
 
-Then these subgroups do define a topology of $\widehat G$, and the canonical morphism $c:G\to\widehat G$ is continuous and its image is dense. 
+Then these subgroups do define a topology on $\widehat G$, and the canonical morphism $c:G\to\widehat G$ is continuous and its image is dense. 
 
 Moreover $\widehat f:\widehat G\to\widehat H$ is continuous if $f:G\to H$ is. 
 
 Finally, for each continuous morphism $f:G\to H$, where $H$ is complete, there is a unique continuous morphism $g:\widehat G\to H$ such that $g\circ c=f$.
+
+Here is an important statement which is implicit in the book.
+
+In the setting considered in the last paragraph of p.~102, let $C\subset G^{\mathbb N}$ be the group of Cauchy sequences (this is indeed easily seen to be a subgroup of $G^{\mathbb N}$), set $\widehat G:=\lim G/G_i$, and define $\varphi:C\to\widehat G$ by $\varphi(x)_i:=\pi_i(x_j)$ where $\pi_i:G\to G/G_i$ is the canonical projection and $j$ is a large enough integer depending on $i$. Then $\varphi$ is a well defined group epimorphism, and it induces an isomorphism $C/\!\!\sim\ \xrightarrow\sim\widehat G$.
+
+The proof is left to the reader.%We sketch the proof of the surjectivity of $\varphi$ and leave the rest of the proof to the reader. ... Let $\xi$ be in $\widehat G$. 
 
 \section{Page 105}%
 
